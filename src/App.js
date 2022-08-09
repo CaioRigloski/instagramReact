@@ -7,6 +7,7 @@ const HomePage = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-color: rgb(250, 250, 250);
 `
 
 function App() {
