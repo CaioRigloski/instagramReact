@@ -1,14 +1,20 @@
-import './App.css';
-import Phone from './Components/Phone';
+import './App.css'
+import Phone from './Components/Phone'
+import Login from './Components/Login'
+import styled from 'styled-components'
 
+const HomePage = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`
 
 function App() {
   return (
-    <div className="App">
-      <Phone>
-
-      </Phone>
-    </div>
+    <HomePage className="App">
+      <Phone />
+      <Login />
+    </HomePage>
   );
 }
 
