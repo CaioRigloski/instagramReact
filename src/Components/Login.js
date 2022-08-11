@@ -8,27 +8,56 @@ const LoginContainer = styled.div`
 `
 
 const LoginBox = styled.div`
-  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 350px;
   border 1px solid #dbdbdb;
   background-color: white;
+  margin: 0;
 `
 
 
-const ProfilePic = styled.img`
+const ProfilePic = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 100px;
+  overflow: hidden;
+  & > img {
+    width: 100px;
+  }
 `
 const LoginButton = styled.button`
-  height: 50%;
+  cursor: pointer;
   background-color: #0095F4;
   color: white;
   border: 1px solid transparent;
+  border-radius: 4px;
   font-family: sans-serif;
-  font-weight: 800;
+  font-weight: 600;
+  & > p {
+    margin: 5px 20px 5px 20px;
+  }
+`
+
+const ChangeAccount = styled.p`
+  font-family: sans-family;
+  font-size: 14px;
+  color: rgb(38, 38, 38)
+`
+
+const Link = styled.a`
+  color: #0094f6;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
 `
 
 function Login() {
+
+  const User = 'caio_rig'
 
   return(
     <LoginContainer>
@@ -36,12 +65,13 @@ function Login() {
         <div>
           <img src={Images.Logo} alt="Instagram"></img>
         </div>
-        <div>
-          <ProfilePic src={Images.Profile} alt="Profile picture"></ProfilePic>
-        </div>
+        <ProfilePic>
+          <img src={Images.Profile} alt="Profile"></img>
+        </ProfilePic>
         <LoginButton type="button">
-          Continuar como caio_rig
+          <p>Continuar como {User}</p>
         </LoginButton>
+        <ChangeAccount>Não é {User}? <Link href="#">Trocar de conta</Link></ChangeAccount>
       </LoginBox>
     </LoginContainer>
   )

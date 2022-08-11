@@ -12,15 +12,14 @@ const PhoneContainer = styled.div`
 const PhoneDiv = styled.div`
   background-image: url('${props => props.imageUrl}');
   background-repeat: no-repeat;
-  background-position: -49px;
-  width: 465px;
-  height: 635px;
-  display: grid;
-  justify-items: center;
-`
-
-const PhoneImages = styled.div`
-  margin: 27px;
+  background-size: 465px 635px;
+  background-position: center;
+  background-position-y: top;
+  width: 390px;
+  height: 590px;
+  & > div {
+    margin: 24px 0 0 97px;
+  }
 `
 
 function Phone() {
@@ -29,9 +28,9 @@ function Phone() {
   return (
     <PhoneContainer>
       <PhoneDiv imageUrl={phoneUrl}>
-        <PhoneImages>
+        <div>
           {Images.PhoneImages.map(RenderImage)}
-        </PhoneImages>
+        </div>
       </PhoneDiv>
     </PhoneContainer>
   )
