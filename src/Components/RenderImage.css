@@ -1,7 +1,19 @@
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
 .hide-element {
   display: none;
+  opacity: 0;
 }
 
 .show-element {
   display: unset;
+  -webkit-animation: fadeInOut 6s ease-in-out;
+  -moz-animation: fadeInOut 6s ease-in-out;
+  -o-animation: fadeInOut 6s ease-in-out;
+  animation: fadeInOut 6s ease-in-out;
 }

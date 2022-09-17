@@ -43,8 +43,8 @@ const LoginButton = styled.button`
 `
 
 const ChangeAccount = styled.p`
-  font-family: sans-family;
-  font-size: 14px;
+  font-family: sans-serif;
+  font-size: 13px;
   color: rgb(38, 38, 38)
 `
 

@@ -11,6 +11,7 @@ const HomePage = styled.div`
   justify-content: center;
   background-color: rgb(250, 250, 250);
   gap: 25px;
+  text-align: center;
 `
 
 function App() {

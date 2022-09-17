@@ -8,7 +8,7 @@ const RenderImage = (img, key, array) => {
     index: 0
   })
 
-// outside of interval scope to always take the last index.
+// index base outside of interval scope to always take the last index.
 let i = elementWillRender.index
 
   useEffect(() => {
@@ -19,7 +19,7 @@ let i = elementWillRender.index
         elementWillRender.isVisible ? setElementWillRender({...elementWillRender, isVisible : false, index: i}) : setElementWillRender({...elementWillRender, isVisible : true, index: i})
 
         clearInterval(time)
-      }, 2000)
+      }, 5990 /* some ms to avoid render flickering with fade in and out */)
     }
 
     // a infinite loop for array index. "-1" ensure that starts at 0.
@@ -32,7 +32,7 @@ let i = elementWillRender.index
     }
   }, [elementWillRender])
   
-  
+
   return (
     <img src={img} key={'phone-pic' + key} alt="Erro" className={elementWillRender.index === key ? 'show-element' : 'hide-element'}></img>
   )
